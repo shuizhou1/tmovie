@@ -55,11 +55,13 @@
 </script>
 
 <style lang="less" scoped>
+  body {
+    margin-top: 2rem;
+  }
   .tHeader{
     width: 100%;
     height: 2rem;
     background: #222222;
-    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -76,7 +78,7 @@
     .logo {
       height: 1.5rem;
       width: 5rem;
-      background: url("../comen/img/head_logo.png") no-repeat;
+      background: url("../../comen/img/head_logo.png") no-repeat;
       background-size: cover;
     }
     /*background-repeat: ;*/

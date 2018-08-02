@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import thome from './components/home'
+import thome from './components/home/home'
 export default {
   name: 'App',
   created() {

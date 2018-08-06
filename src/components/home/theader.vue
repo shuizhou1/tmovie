@@ -18,7 +18,7 @@
       }
     },
     methods : {
-      async getLocationId() {
+       getLocationId() {
         let self = this
         // 百度地图api获取当前城市
         this.$http.get('/baiduMap/location/ip', {
@@ -56,9 +56,12 @@
 
 <style lang="less" scoped>
   body {
-    margin-top: 2rem;
+    /*padding-top: 2rem;*/
   }
   .tHeader{
+    margin-bottom: 2rem;
+    position: fixed;
+    z-index: 1;
     width: 100%;
     height: 2rem;
     background: #222222;

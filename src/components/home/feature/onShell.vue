@@ -24,8 +24,7 @@ export default {
     }
   },
   created () {
-    let self = this
-
+    console.log(this.$refs);
     this.$http.get('/api/PageSubArea/HotPlayMovies.api', {
       params: {
         locationId: this.locationId
@@ -33,7 +32,9 @@ export default {
     }).then( (req) => {
       console.log(req)
       this.movieArr = req.data.movies
-      this.$refs.movieList.style.width = this.movieArr.length*9.5 + 'rem'
+      console.log(this.$refs);
+      console.log(this.$refs.movieList);
+      this.$refs.movieList.style.width = this.movieArr.length*9.4 + 'rem'
     })
   }
 }
@@ -44,35 +45,35 @@ export default {
 .onSell {
     margin: 0;
     overflow-x:auto;
-      .movieList {
-    li.movieItem {
+    .movieList {
+  li.movieItem {
       padding: 0 .2rem;
       float: left;
       text-align: center;
       p {
         margin-bottom: 0;
       }
-      .imgWraper {
-        position: relative;
-        .movieImg {
-          height: 15rem;
-          width: 9rem;
-        }
-        .movieRating {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          padding: 3px 6px;
-          color: #fff;
-          font-size: .5rem;
-          background: yellowgreen;
-        }
+    .imgWraper {
+      position: relative;
+      .movieImg {
+        height: 15rem;
+        width: 9rem;
       }
-      .textWraper {
-        color: yellowgreen;
-        font-size: .75rem;
+      .movieRating {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 3px 6px;
+        color: #fff;
+        font-size: .5rem;
+        background: yellowgreen;
       }
     }
+    .textWraper {
+      color: yellowgreen;
+      font-size: .75rem;
+    }
+  }
   }
 }
 

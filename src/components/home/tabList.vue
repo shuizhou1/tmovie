@@ -32,7 +32,6 @@
   .tabWraper {
     border: 1px solid #999;
     .tabList {
-      margin: 0;
       display: flex;
       justify-content: space-around;
       align-items: center;

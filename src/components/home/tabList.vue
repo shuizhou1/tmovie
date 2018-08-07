@@ -30,7 +30,7 @@
 
 <style scoped lang="less">
   .tabWraper {
-    border: 1px solid #999;
+    /*border: 1px solid #999;*/
     .tabList {
       display: flex;
       justify-content: space-around;

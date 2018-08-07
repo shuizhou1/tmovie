@@ -1,7 +1,7 @@
 <template>
     <div class="onSell">
       <ul class="movieList" ref="movieList">
-        <li class="movieItem" v-for="(item,index) in movieArr" :key="index">
+        <li class="movieItem" v-for="(item,index) in movieArr" :key="index" @click="sendMovieId(item.movieId)">
           <div class="imgWraper">
             <span class="movieRating">{{item.ratingFinal}}</span>
             <img :src="item.img" alt="" class="movieImg">
@@ -19,22 +19,33 @@ export default {
   name: "onShell",
   data () {
     return {
-      locationId: this.$store.state.locationId,
-      movieArr: null,
+      movieArr: null
+    }
+  },
+  computed: {
+    locationId () {
+      return this.$store.state.locationId
+    }
+  },
+  methods: {
+    sendMovieId (id) {
+      this.$router.push({
+        path: '/movieDetails',
+        name: 'movieDetails',
+        query: {
+          movieId: id
+        }
+      })
     }
   },
   created () {
-    console.log(this.$refs);
     this.$http.get('/api/PageSubArea/HotPlayMovies.api', {
       params: {
         locationId: this.locationId
       }
     }).then( (req) => {
-      console.log(req)
       this.movieArr = req.data.movies
-      console.log(this.$refs);
-      console.log(this.$refs.movieList);
-      this.$refs.movieList.style.width = this.movieArr.length*9.4 + 'rem'
+      this.$refs.movieList.style.width = this.movieArr.length*9.5 + 'rem'
     })
   }
 }
@@ -55,6 +66,7 @@ export default {
       }
     .imgWraper {
       position: relative;
+      height: 15rem;
       .movieImg {
         height: 15rem;
         width: 9rem;

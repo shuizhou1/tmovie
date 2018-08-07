@@ -24,7 +24,14 @@ module.exports = {
         pathRewrite: {
           '^/baiduMap': ''
         }
-      }
+      },
+      '/details': {
+        target: 'https://ticket-api-m.mtime.cn',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/details': ''
+        }
+      },
     },
 
     // Various Dev Server settings

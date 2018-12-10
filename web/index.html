@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--<link rel="stylesheet" href="./static/css/reset.css">-->
+    <title>vmovie</title>
+  </head>
+  <body>
+    <div id="app">
+        <div class="box">
+          <p class="active">dddd</p>
+          <p>aaa</p>
+          <p>ccc</p>
+        </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+
+</html>
+<script>
+  const box = document.querySelector('.box')
+  const oP = document.getElementsByTagName('p')
+
+  // import Vue from 'vue'
+// new Vue({
+//   render () {
+//     return `<div><p>我爱你</p></div>`
+//   }
+// }).$mount('#app')
+  fetch('https://api-m.mtime.cn/PageSubArea/HotPlayMovies.api?locationId=290',{
+    method: 'get'
+  })
+  .then(function (res) {
+    console.log(res);
+  })
+
+</script>
+<style>
+  .active {
+    color: red
+  }
+</style>

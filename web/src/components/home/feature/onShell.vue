@@ -15,7 +15,6 @@
 </template>
 
 <script>
-  import Swiper from 'swiper'
 export default {
   name: "onShell",
   data () {
@@ -48,9 +47,6 @@ export default {
       this.movieArr = res.data.movies
       this.$refs.movieList.style.width = this.movieArr.length*18.8 + 'rem'
     })
-  },
-  mounted () {
-    // this.moveMovieList()
   }
 }
 

@@ -80,12 +80,12 @@ export default {
       padding-left: 1rem;
       font-size: calc(10px + 4 * (100vw - 436px) / 1100);
       .movieName {
-       font-size: 14px;
-       color: #333;
-       margin-bottom: 10px;
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 10px;
       }
       .movieDesc {
-        color: #007ACC;
+        color: #007acc;
         font-size: 12px;
         margin-bottom: 20px;
       }

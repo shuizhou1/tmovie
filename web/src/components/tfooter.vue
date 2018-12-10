@@ -24,10 +24,6 @@
 <script>
 export default {
   name: "tfooter",
-  methods: {
-  },
-  mounted () {
-  },
 }
 
 </script>
